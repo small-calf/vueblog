@@ -1,0 +1,22 @@
+server:
+  port: 8081
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/vueblog?serverTimezone=UTC&characterEncoding=utf-8&useSSL=false
+    username: root
+    password: root
+    type: com.alibaba.druid.pool.DruidDataSource
+shiro-redis:
+  enable: true
+  redis-manage:
+    host: 127.0.0.1:6379
+mybatis-plus:
+  mapper-locations: classpath*:/com/wyl/mapper/*.xml
+calf:
+  jwt:
+    #加密密钥
+    secret: 1q2w3e4r5t6y7u8i9o0p
+    #有效时长7天  604800
+    expire: 120
+    header: Authorization
